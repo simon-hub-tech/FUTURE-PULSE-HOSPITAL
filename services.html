@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Future Pulse Hospital | Our Doctors</title>
+    <title>Future Pulse Hospital | Our Services</title>
 
     <style>
         /* =========================
@@ -191,7 +191,7 @@
         }
 
         /* =========================
-           PAGE-SPECIFIC STYLES (doctors.html only)
+           PAGE-SPECIFIC STYLES (services.html only)
            ========================= */
 
         .page-banner {
@@ -211,15 +211,38 @@
             margin: 0 auto;
         }
 
-        .doctor-specialty {
-            color: var(--burgundy);
-            font-weight: bold;
-            margin-bottom: 10px;
+        .service-list {
+            list-style: disc;
+            padding-left: 20px;
+            margin-top: 10px;
         }
 
-        .doctor-card .btn {
-            margin-top: 5px;
-            text-align: center;
+        .service-list li {
+            margin-bottom: 5px;
+        }
+
+        .hours-table {
+            width: 100%;
+            max-width: 700px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background-color: var(--white);
+        }
+
+        .hours-table th,
+        .hours-table td {
+            border: 1px solid var(--burgundy);
+            padding: 12px 15px;
+            text-align: left;
+        }
+
+        .hours-table th {
+            background-color: var(--burgundy);
+            color: var(--white);
+        }
+
+        .hours-table td {
+            color: var(--burgundy-dark);
         }
 
         @media (max-width: 800px) {
@@ -240,6 +263,11 @@
             .page-banner h1 {
                 font-size: 2rem;
             }
+
+            .hours-table th,
+            .hours-table td {
+                padding: 10px;
+            }
         }
     </style>
 </head>
@@ -255,69 +283,107 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="doctors.html" class="active">Doctors</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="doctors.html">Doctors</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <!-- Doctors page banner -->
+    <!-- Services page banner -->
     <section class="page-banner">
         <div class="container">
-            <h1>Meet our doctors</h1>
-            <p>Our dedicated medical team is committed to providing compassionate care and supporting your health at every stage of life.</p>
+            <h1>Our services</h1>
+            <p>We provide quality healthcare and compassionate support to help you and your family live healthier lives.</p>
         </div>
     </section>
 
-    <!-- Doctor profiles -->
+    <!-- Main hospital services -->
     <section>
         <div class="container">
             <div class="section-title">
-                <h2>Our Medical Team</h2>
-                <p>Meet the professionals who work hard to provide quality healthcare for you and your family.</p>
+                <h2>Healthcare Services</h2>
+                <p>Discover the medical services we provide to meet your healthcare needs.</p>
             </div>
 
             <div class="grid-3">
 
-                <!-- General medicine doctor card -->
-                <div class="card doctor-card">
-                    <!-- Image placeholder: replace with the doctor's actual photo when available. -->
-                    <div class="ph">images/doctor-1.jpg</div>
+                <!-- General medicine service card -->
+                <div class="card">
+                    <!-- Image placeholder: replace with the actual service image when available. -->
+                    <div class="ph">images/service-1.jpg</div>
 
-                    <h3>Dr. Full Name</h3>
-                    <p class="doctor-specialty">General Medicine</p>
-                    <p>Dr. Full Name provides general medical consultations and preventive care, helping patients manage common illnesses and maintain their overall health.</p>
+                    <h3>General Medicine</h3>
+                    <p>Our general medicine service provides routine medical consultations, diagnosis, and treatment for common illnesses. We also support preventive care to help patients maintain good health.</p>
 
-                    <a href="contact.html" class="btn">Book an appointment</a>
+                    <ul class="service-list">
+                        <li>Medical consultations and diagnosis</li>
+                        <li>Routine health check-ups</li>
+                        <li>Management of common illnesses</li>
+                    </ul>
                 </div>
 
-                <!-- Pediatrics doctor card -->
-                <div class="card doctor-card">
-                    <!-- Image placeholder: replace with the doctor's actual photo when available. -->
-                    <div class="ph">images/doctor-2.jpg</div>
+                <!-- Maternity and child care service card -->
+                <div class="card">
+                    <!-- Image placeholder: replace with the actual service image when available. -->
+                    <div class="ph">images/service-2.jpg</div>
 
-                    <h3>Dr. Full Name</h3>
-                    <p class="doctor-specialty">Pediatrics</p>
-                    <p>Dr. Full Name focuses on children's health and development, providing medical care and guidance to help children grow up healthy.</p>
+                    <h3>Maternity and Child Care</h3>
+                    <p>We support mothers and children through every stage of care, from pregnancy to early childhood. Our team focuses on the health, comfort, and wellbeing of both mothers and their babies.</p>
 
-                    <a href="contact.html" class="btn">Book an appointment</a>
+                    <ul class="service-list">
+                        <li>Antenatal and postnatal care</li>
+                        <li>Maternal health consultations</li>
+                        <li>Child wellness checks and immunisation</li>
+                    </ul>
                 </div>
 
-                <!-- Cardiology doctor card -->
-                <div class="card doctor-card">
-                    <!-- Image placeholder: replace with the doctor's actual photo when available. -->
-                    <div class="ph">images/doctor-3.jpg</div>
+                <!-- Emergency care service card -->
+                <div class="card">
+                    <!-- Image placeholder: replace with the actual service image when available. -->
+                    <div class="ph">images/service-3.jpg</div>
 
-                    <h3>Dr. Full Name</h3>
-                    <p class="doctor-specialty">Cardiology</p>
-                    <p>Dr. Full Name supports patients with heart health concerns through cardiovascular assessments, treatment guidance, and preventive care.</p>
+                    <h3>Emergency Care</h3>
+                    <p>Our emergency care service provides prompt assessment and treatment for urgent medical conditions. We aim to stabilise patients quickly and provide appropriate care when every moment matters.</p>
 
-                    <a href="contact.html" class="btn">Book an appointment</a>
+                    <ul class="service-list">
+                        <li>Emergency medical assessment</li>
+                        <li>First aid and stabilisation</li>
+                        <li>Urgent treatment and referrals</li>
+                    </ul>
                 </div>
 
             </div>
+        </div>
+    </section>
+
+    <!-- Hospital opening hours -->
+    <section class="bg-tint">
+        <div class="container">
+            <div class="section-title">
+                <h2>Opening hours</h2>
+                <p>Our services are available at the following times.</p>
+            </div>
+
+            <table class="hours-table">
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Opening hours</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Emergency</td>
+                        <td>24/7</td>
+                    </tr>
+                    <tr>
+                        <td>Outpatient</td>
+                        <td>Mon to Sat, 8:00 am to 6:00 pm</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </section>
 
@@ -325,7 +391,7 @@
     <section class="cta">
         <div class="container">
             <h2>Your Health Matters to Us</h2>
-            <p>Ready to speak with our medical team? Contact us to arrange your appointment.</p>
+            <p>Contact Future Pulse Hospital to learn more about our services or arrange your visit.</p>
             <a href="contact.html" class="btn btn-light">Contact Us</a>
         </div>
     </section>
