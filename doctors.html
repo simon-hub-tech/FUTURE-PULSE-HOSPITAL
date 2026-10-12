@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Future Pulse Hospital | Our Doctors</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 
     <style>
         /* =========================
@@ -47,39 +50,53 @@
             margin: 0 auto;
         }
 
-        header {
-            background-color: var(--burgundy);
-            color: var(--white);
-            padding: 15px 0;
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: var(--white);
+            border-bottom: 1px solid #e8d9de;
         }
 
-        .header-inner {
+        .site-header .container {
+            width: min(1100px, 92%);
+        }
+
+        .nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
             gap: 20px;
+            padding: 16px 0;
         }
 
         .logo {
+            font-family: Georgia, serif;
+            font-family: "Lora", Georgia, serif;
             font-size: 1.4rem;
-            font-weight: bold;
+            font-weight: 700;
+            color: #7a1230;
         }
 
         nav ul {
             display: flex;
             list-style: none;
-            gap: 20px;
+            gap: 26px;
+            flex-wrap: wrap;
         }
 
         nav a {
-            color: var(--white);
-            padding: 6px 10px;
-            border-radius: 4px;
+            color: inherit;
+            font-family: "Source Sans 3", Arial, sans-serif;
+            font-weight: 600;
+            padding: 6px 0;
+            border-bottom: 2px solid transparent;
         }
 
         nav a:hover,
         nav a.active {
-            background-color: var(--burgundy-dark);
+            color: #7a1230;
+            border-bottom-color: #7a1230;
         }
 
         .btn {
@@ -154,14 +171,21 @@
         .ph {
             background-color: var(--tint);
             color: var(--burgundy);
-            min-height: 150px;
+            height: 190px;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 15px;
+            padding: 0;
+            overflow: hidden;
             margin-bottom: 18px;
             border-radius: 4px;
+        }
+
+        .ph img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .bg-tint {
@@ -195,20 +219,21 @@
            ========================= */
 
         .page-banner {
-            background-color: var(--burgundy);
+            background-color: #7a1230;
             color: var(--white);
-            text-align: center;
-            padding: 55px 0;
+            padding: 60px 0;
         }
 
         .page-banner h1 {
-            font-size: 2.4rem;
+            font-family: "Lora", Georgia, serif;
+            color: var(--white);
+            font-size: 2.6rem;
             margin-bottom: 10px;
         }
 
         .page-banner p {
-            max-width: 700px;
-            margin: 0 auto;
+            max-width: 55ch;
+            opacity: .92;
         }
 
         .doctor-specialty {
@@ -227,7 +252,7 @@
                 grid-template-columns: 1fr;
             }
 
-            .header-inner {
+            .nav {
                 flex-direction: column;
             }
 
@@ -247,11 +272,11 @@
 <body>
 
     <!-- Shared website header -->
-    <header>
-        <div class="container header-inner">
+    <header class="site-header">
+        <div class="container nav">
             <a href="index.html" class="logo">Future Pulse Hospital</a>
 
-            <nav>
+            <nav aria-label="Main navigation">
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>

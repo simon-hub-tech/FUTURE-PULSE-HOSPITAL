@@ -160,7 +160,15 @@
       padding: 12px;
       border-radius: 8px;
       font-size: .9rem;
-      min-height: 200px;
+      height: 200px;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .ph img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     /* ===== CARDS ===== */
@@ -180,7 +188,7 @@
     .card .ph {
       border-radius: 0;
       border-width: 0 0 2px 0;
-      min-height: 190px;
+      height: 190px;
     }
 
     .card-body {
@@ -401,25 +409,23 @@
     
 <!-- Hero -->
 <section class="hero">
-  <div class="container hero-inner" style="display: grid; grid-template-columns: 1.1fr 1fr; gap: 50px; align-items: center;">
-    <div>
+  <div class="container hero-inner">
+    <!-- Hospital hero image -->
+    <div class="hero-image">
+      <img src="images/hospital.jpg" alt="Future Pulse Hospital building">
+    </div>
+
+    <div class="hero-content">
       <h1>Care that keeps pace with your life.</h1>
       <p>
         Future Pulse Hospital brings experienced doctors,
         modern equipment and a caring team together under
         one roof, for you and your whole family.
       </p>
-
-      <div class="hero-actions"></div>
+      <div class="hero-actions">
         <a href="contact.html" class="btn">Book an appointment</a>
         <a href="services.html" class="btn btn-outline">View our services</a>
       </div>
-    </div>
-
-    <!-- Hospital hero image -->
-    <div class="hero-image">
-      <img src="images/hospital.jpg"width="100" height="100";object-fit: cover; object-position: left;""
-           alt="Future Pulse Hospital building">
     </div>
   </div>
 </section>
